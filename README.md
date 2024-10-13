@@ -128,7 +128,7 @@ This command will run a CPA attack iteratively and plot the ranks of the correct
 You can also plot the power model against the power consumption data to visually validate whether the model is influencing the power consumption:
 
 ```bash
-rda - power_sim_aes_sbox 100000 - power_init -- no_diff - power_eval_model "hwsbox(v000, g000)" - g Exp - idx "hwsbox(v000, g000)" - plot_line Power
+rda - power_sim_aes_sbox 100000 - power_init --no_diff - power_eval_model "hwsbox(v000, g000)" - g Exp - idx "hwsbox(v000, g000)" - plot_line Power
 ```
 
 ![Power Model Validation](hwsbox.png)
