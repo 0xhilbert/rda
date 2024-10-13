@@ -18,8 +18,6 @@ from rda.cli.command import GroupedData, UngroupedData, command, tuple_list
 
 LABELSIZE = 6
 
-from rda.plot.scrollable_legend import add_scrollable_legend
-
 
 def to_label(xs):
 	return ' '.join([str(x) for x in xs])
@@ -223,9 +221,6 @@ def plot_samples_histogram(
 		ax.set_xlabel('index')
 		ax.grid(True)
 
-		if not in_ax:
-			add_scrollable_legend(ax)
-
 		ax.set_title(f'Histogram plot of {column_name!r} for {group_name!r}')
 		ax = sns.histplot(
 		    data=df,
@@ -240,9 +235,6 @@ def plot_samples_histogram(
 		    fill=True,
 		    kde=False)
 		ax.grid(True)
-
-		if not in_ax:
-			add_scrollable_legend(ax)
 
 
 def plot_samples_filtered(df, meta, column, in_ax=None, interpolate=True):
@@ -289,9 +281,6 @@ def plot_samples_filtered(df, meta, column, in_ax=None, interpolate=True):
 	ax.set_title(f'Filtered Samples of {column!r} {"w" if interpolate else "wo"} interp.')
 	ax.set_xlabel('index')
 	ax.grid(True)
-
-	if not in_ax:
-		add_scrollable_legend(ax)
 
 
 def iterate_plotting_info(
@@ -885,9 +874,6 @@ def plot_group_stats(df, meta, column, in_axs=None):
 		ax.set_ylabel('')
 		ax.grid(True)
 
-		if not in_axs:
-			add_scrollable_legend(ax)
-
 
 @command('plot_heatmap', grouped=False)
 def plot_heatmap(data: UngroupedData,
@@ -1021,13 +1007,6 @@ def plot_overview(df, meta, column):
 	plot_similarity_matrix(KS, meta, column, 'KS', axs[5])
 
 	plot_group_stats(df, meta, column, axs[6:8])
-
-	add_scrollable_legend(axs[0], loc='upper left')
-	add_scrollable_legend(axs[1], loc='upper right')
-	add_scrollable_legend(axs[2], loc='upper right')
-	add_scrollable_legend(axs[3], loc='upper left')
-	add_scrollable_legend(axs[6], loc='upper right')
-	add_scrollable_legend(axs[7], loc='upper left')
 
 	# axs[1].set_xticklabels(labels=axs[1].get_xticklabels(), ha='right')
 	# axs[3].set_xticklabels(labels=axs[3].get_xticklabels(), ha='right')
