@@ -38,6 +38,9 @@ To avoid package conflicts, it is recommended to use a virtual environment, such
    pip install -e .
    ```
 
+### Requirements
+CuPy could require the cuda toolkit on some systems. Please follow the installation requirements on [cupy.dev](https://cupy.dev).
+
 ## Usage Examples
 
 ### Example Dataset
