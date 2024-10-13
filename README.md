@@ -137,3 +137,5 @@ rda - power_sim_aes_sbox 100000 - power_init -- no_diff - power_eval_model "hwsb
 # Disclaimer
 This code is provided "as-is," without any warranties or guarantees regarding its correctness, performance, or suitability for any particular purpose. Use this code at your own risk. The authors and contributors are not responsible for any direct or indirect damages or issues that arise from the use of this code. No support or maintenance is implied.
 
+# Acknowledgments
+Special thanks to Gäetan Cassiers for the countless discussions on optimizing the performance of the CPA implementation.
