@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rda"
+version = "0.0.1"
+authors = [
+  { name="Andreas Kogler", email="-" },
+]
+description = "Rapid Data Anylsis Framework"
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+
+[metadata]
+name = "rda"
+version = "0.0.1"
+
+
+[project.scripts]
+rda = "rda.rda:main"
