@@ -3,10 +3,10 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "rda"
+name = "rda_public"
 version = "0.0.1"
 authors = [
-  { name="Andreas Kogler", email="-" },
+  { name="Andreas Kogler" },
 ]
 description = "Rapid Data Anylsis Framework"
 readme = "README.md"
@@ -17,7 +17,7 @@ package-dir = {"" = "src"}
 
 
 [metadata]
-name = "rda"
+name = "rda_public"
 version = "0.0.1"
 
 
